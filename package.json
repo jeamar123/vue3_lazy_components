@@ -1,6 +1,16 @@
 {
-  "name": "vue_lazy_components",
-  "version": "0.0.0",
+  "name": "vue3_lazy_components",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/vue3_lazy_components.umd.cjs",
+  "module": "./dist/vue3_lazy_components.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3_lazy_components.es.js",
+      "require": "./dist/vue3_lazy_components.umd.js"
+    }
+  },
+  "version": "0.0.2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,5 +28,11 @@
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "^2.7.1",
     "vite": "^3.0.4"
+  },
+  "private": false,
+  "homepage": "https://github.com/jeamar123/vue3_lazy_components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeamar123/vue3_lazy_components.git"
   }
 }
