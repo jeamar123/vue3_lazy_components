@@ -1,23 +1,23 @@
 {
   "name": "vue3_lazy_components",
   "type": "module",
-  "files": ["dist"],
-  "main": "./dist/vue3_lazy_components.umd.cjs",
-  "module": "./dist/vue3_lazy_components.js",
+  "files": [
+    "dist/*"
+  ],
   "exports": {
-    ".": {
-      "import": "./dist/vue3_lazy_components.es.js",
-      "require": "./dist/vue3_lazy_components.umd.js"
-    }
+    ".": "./dist/index.js"
   },
-  "version": "0.0.4",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "version": "0.0.10",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^3.2.37"
   },
   "devDependencies": {
